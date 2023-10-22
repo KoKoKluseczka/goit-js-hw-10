@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 08</title>
-  </head>
-  <body>
-    <select class="breed-select"></select>
-    <p class="loader">Loading data, please wait...</p>
-    <p class="error">Oops! Something went wrong! Try reloading the page!</p>
-    <div class="cat-info"></div>
-
-    <script src="index.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 08</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Country Search</h1>
+    <input type="text" id="search-box" placeholder="Enter a country name..." />
+    <div class="loader">Loading data, please wait...</div>
+    <div class="error">Oops! Something went wrong! Try reloading the page.</div>
+    <div class="country-list">
+      <ul></ul>
+    </div>
+    <div class="country-info">
+      <div class="country-card">
+        <img class="flag" src="" alt="Flag" />
+        <h2 class="country-name"></h2>
+        <p><strong>Capital:</strong> <span class="capital"></span></p>
+        <p><strong>Population:</strong> <span class="population"></span></p>
+        <p><strong>Languages:</strong> <span class="languages"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js" type="module"></script>
+</body>
 </html>

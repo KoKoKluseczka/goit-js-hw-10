@@ -1,0 +1,59 @@
+/* styles.css */
+
+/* Stylowanie głównego kontenera strony */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Stylowanie pola wyszukiwania */
+  #search-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stylowanie listy krajów */
+  .country-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .country-list li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+  }
+  
+  /* Stylowanie karty informacji o kraju */
+  .country-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .flag {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .country-name {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  /* Ukrycie komunikatów */
+  .loader,
+  .error {
+    display: none;
+    margin-top: 10px;
+  }
