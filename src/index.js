@@ -28,9 +28,9 @@ function handleSearch() {
           showNotFoundError();
         }
       })
-      .catch(() => {
-        showError();
-      });
+      // .catch(() => {
+      //   showError();
+      // });
   } else {
     clearUI();
   }
@@ -57,7 +57,8 @@ function showCountryInfo(country) {
   const name = country.name.official;
   const capital = country.capital;
   const population = country.population;
-  const languages = country.languages.map((lang) => lang.name).join(', ');
+  // const languages = country.languages.map(lang => lang).join(', ');
+  const languages = Object.values(country.languages).join(', ');
 
   const countryCard = countryInfo.querySelector('.country-card');
   countryCard.innerHTML = '';
@@ -72,9 +73,20 @@ function showCountryInfo(country) {
   nameElement.className = 'country-name';
   nameElement.textContent = name;
   countryCard.appendChild(nameElement);
-  const capitalElement = countryCard.querySelector('.capital');
-  const populationElement = countryCard.querySelector('.population');
-  const languagesElement = countryCard.querySelector('.languages');
+  // const capitalElement = countryCard.querySelector('.capital');
+  const capitalElement = document.createElement('p');
+  capitalElement.className = 'capital'; // Dodaliśmy klasę 'capital'
+  capitalElement.innerHTML = `<strong>Capital:</strong> <span>${capital}</span>`;
+  countryCard.appendChild(capitalElement);
+  // const populationElement = countryCard.querySelector('.population');
+  const populationElement = document.createElement('p');
+  populationElement.innerHTML = `<strong>Population:</strong> <span>${population}</span>`;
+  countryCard.appendChild(populationElement);
+  // const languagesElement = countryCard.querySelector('.languages');
+  const languagesElement = document.createElement('p');
+  languagesElement.className = 'languages';
+  languagesElement.innerHTML = `<strong>Languages:</strong> <span>${languages}</span>`;
+  countryCard.appendChild(languagesElement);
 
   flagImg.src = flag;
   nameElement.textContent = name;
