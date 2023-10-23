@@ -28,9 +28,9 @@ function handleSearch() {
           showNotFoundError();
         }
       })
-      // .catch(() => {
-      //   showError();
-      // });
+      .catch(() => {
+        showError();
+      });
   } else {
     clearUI();
   }
