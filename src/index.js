@@ -60,8 +60,18 @@ function showCountryInfo(country) {
   const languages = country.languages.map((lang) => lang.name).join(', ');
 
   const countryCard = countryInfo.querySelector('.country-card');
-  const flagImg = countryCard.querySelector('.flag');
-  const nameElement = countryCard.querySelector('.country-name');
+  countryCard.innerHTML = '';
+  // const flagImg = countryCard.querySelector('.flag');
+  const flagImg = document.createElement('img');
+  flagImg.className = 'flag';
+  flagImg.src = flag;
+  flagImg.alt = 'Flag';
+  countryCard.appendChild(flagImg);
+  // const nameElement = countryCard.querySelector('.country-name');
+  const nameElement = document.createElement('h2');
+  nameElement.className = 'country-name';
+  nameElement.textContent = name;
+  countryCard.appendChild(nameElement);
   const capitalElement = countryCard.querySelector('.capital');
   const populationElement = countryCard.querySelector('.population');
   const languagesElement = countryCard.querySelector('.languages');
